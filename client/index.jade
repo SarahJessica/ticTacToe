@@ -1,14 +1,43 @@
 doctype html
 html
   head
-    meta(charset='utf-8')      
-    title Apollo
+    meta(charset='utf-8')
+    title Tic Tac Toe
     link(rel='stylesheet', href='/vendor/font-awesome/css/font-awesome.min.css')
     link(rel='stylesheet', href=isProd ? '/index.min.css' : '/index.css')
     link(rel='shortcut icon', href='/favicon.ico')
   body
-    img#apollo(src='/assets/apollo.jpg')
-    h1#title Apollo
+    #container
+      h1 Tic Tac Toe
+      
+      #controls
+        button#reset Reset
+        #chooser
+          label X
+          input#p1-choose(type="color", value="#d5ba23")
+          label O
+          input#p2-choose(type="color", value="#91b544") 
+          button#start Start Game
+        #players
+          #p1.player
+          #p2.player
 
+
+      Table
+        tbody
+          tr
+            td#A1
+            td#B1
+            td#C1
+          tr
+            td#A2
+            td#B2
+            td#C2
+          tr
+            td#A3
+            td#B3
+            td#C3
+
+    script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/lodash/lodash.min.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
