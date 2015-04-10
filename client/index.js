@@ -24,6 +24,7 @@ function reset(){
   $('#chooser').show();
   $('#players').hide();
   $('td').css('background-color', '#ffffff');
+  $('td').removeClass('p1 p2');
 }
 
 function start(){
